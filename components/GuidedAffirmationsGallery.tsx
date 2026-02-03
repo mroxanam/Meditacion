@@ -21,6 +21,8 @@ const GuidedAffirmationsGallery = ({
                     data={products}
                     showsHorizontalScrollIndicator={false}
                     keyExtractor={(item) => item.id.toString()}
+                    horizontal
+                    contentContainerStyle={{ paddingHorizontal: 16 }}
                     renderItem={({ item }) => (
                         <Link href={`/affirmations/${item.id}`} asChild>
                             <Pressable>
@@ -34,8 +36,6 @@ const GuidedAffirmationsGallery = ({
                             </Pressable>
                         </Link>
                     )}
-                    horizontal
-                    contentContainerStyle={{ paddingHorizontal: 16 }}
                 />
             </View>
         </View>

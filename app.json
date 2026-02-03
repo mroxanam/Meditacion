@@ -7,9 +7,10 @@
     "icon": "./assets/icon.png",
     "scheme": "meditacion-app",
     "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "cover",
       "backgroundColor": "#161B22"
     },
     "assetBundlePatterns": [
@@ -29,8 +30,13 @@
       "bundler": "metro"
     },
     "plugins": [
-      "expo-font",
-      "expo-router"
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/RobotoMono-Regular.ttf"]
+        }
+      ]
     ]
   }
 }

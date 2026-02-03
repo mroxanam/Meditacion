@@ -4,7 +4,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-// this will prevent the flash screen from auto hiding until loading all the assets is complete
+// Evita que la pantalla de carga se oculte automáticamente
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
@@ -13,37 +13,30 @@ export default function RootLayout() {
     });
 
     useEffect(() => {
-        if (error) throw error;
-        if (fontsLoaded) SplashScreen.hideAsync();
+        if (error) {
+            console.error("Error cargando fuentes:", error);
+        }
+        if (fontsLoaded || error) {
+            SplashScreen.hideAsync();
+        }
     }, [fontsLoaded, error]);
 
-    if (!fontsLoaded) {
-        return null;
-    }
-
+    // Solo retornamos null mientras cargan. Si hay error, fontsLoaded será false
+    // pero el useEffect ocultará el Splash y mostrará la app con fuente estándar.
     if (!fontsLoaded && !error) {
-        return null;
+        return null; 
     }
 
     return (
         <SafeAreaProvider>
             <TimerProvider>
                 <Stack>
-                    <Stack.Screen
-                        name="index"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="(tabs)"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="meditate/[id]"
-                        options={{ headerShown: false }}
-                    />
-                    <Stack.Screen
-                        name="(modal)/adjust-meditation-duration"
-                        options={{ headerShown: false, presentation: "modal" }}
+                    <Stack.Screen name="index" options={{ headerShown: false }} />
+                    <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                    <Stack.Screen name="meditate/[id]" options={{ headerShown: false }} />
+                    <Stack.Screen 
+                        name="(modal)/adjust-meditation-duration" 
+                        options={{ headerShown: false, presentation: "modal" }} 
                     />
                 </Stack>
             </TimerProvider>
