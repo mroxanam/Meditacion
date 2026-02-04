@@ -1,8 +1,8 @@
 import { Entypo, MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { Tabs, useRouter } from "expo-router";
-import Colors from "@/constants/Colors";
+import Colors from "../../constants/Colors";
 import React from "react";
-import { Platform } from "react-native"; // Importamos Platform para detectar el sistema
+import { Platform } from "react-native"; 
 
 export const unstable_settings = {
     initialRouteName: "nature-meditate",

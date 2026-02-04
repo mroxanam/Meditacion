@@ -3,6 +3,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import React, { useContext, useEffect, useState } from "react";
 import { ImageBackground, Pressable, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
+// @ts-ignore
 import { Audio } from "expo-av";
 import CustomButton from "@/components/CustomButton";
 
@@ -116,7 +117,7 @@ const Page = () => {
                         onPress={() => router.back()}
                         style={{ position: 'absolute', top: 64, left: 24, zIndex: 10, opacity: 0.8 }}
                     >
-                        <AntDesign name="left-circle" size={44} color="white" />
+                        <AntDesign name="leftcircle" size={44} color="white" />
                     </Pressable>
 
                     <View style={{ flex: 1, justifyContent: 'center' }}>
