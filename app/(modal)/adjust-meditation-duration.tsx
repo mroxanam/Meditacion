@@ -24,7 +24,7 @@ const AdjustMeditationDuration = () => {
                     onPress={() => router.back()}
                     className="absolute top-8 left-6 z-10"
                 >
-                    <AntDesign name="leftcircle" size={50} color="white" />
+                    <AntDesign name="left-circle" size={50} color="white" />
                 </Pressable>
                 <View className="justify-center h-4/5">
                     <View>

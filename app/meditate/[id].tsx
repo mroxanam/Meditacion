@@ -117,7 +117,7 @@ const Page = () => {
                         onPress={() => router.back()}
                         style={{ position: 'absolute', top: 64, left: 24, zIndex: 10, opacity: 0.8 }}
                     >
-                        <AntDesign name="leftcircle" size={44} color="white" />
+                        <AntDesign name="left-circle" size={44} color="white" />
                     </Pressable>
 
                     <View style={{ flex: 1, justifyContent: 'center' }}>
