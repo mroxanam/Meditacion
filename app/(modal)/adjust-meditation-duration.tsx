@@ -62,4 +62,4 @@ const AdjustMeditationDuration = () => {
 };
 
 export default AdjustMeditationDuration;
-// Final fix
+// Actualización final para Vercel
