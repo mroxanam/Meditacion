@@ -1,5 +1,5 @@
-import GuidedAffirmationsGallery from "@/components/GuidedAffirmationsGallery";
-import images from "@/constants/affirmation-images";
+import GuidedAffirmationsGallery from "../../../components/GuidedAffirmationsGallery";
+import images from "../../../constants/affirmation-images";
 import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
 import React from "react";

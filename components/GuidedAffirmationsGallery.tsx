@@ -1,5 +1,5 @@
 import { Image, View, Text, FlatList, Pressable } from "react-native";
-import { GalleryPreviewData } from "@/constants/models/AffirmationCategory";
+import { GalleryPreviewData } from "../constants/models/AffirmationCategory";
 import { Link } from "expo-router";
 
 interface GuidedAffirmationsGalleryProps {

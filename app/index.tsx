@@ -2,13 +2,13 @@ import { View, Text, ImageBackground } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
-import CustomButton from "@/components/CustomButton"; // Verifica que tengas el alias @ configurado
-import AppGradient from "@/components/AppGradient";
+import CustomButton from "../components/CustomButton"; // Verifica que tengas el alias @ configurado
+import AppGradient from "../components/AppGradient";
 import { useRouter } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
 
 // Asegúrate de que la extensión y la ruta coincidan con tu carpeta assets
-import beachImage from "@/assets/meditation-images/beach.webp";
+import beachImage from "../assets/meditation-images/beach.webp";
 
 const App = () => {
     const router = useRouter();

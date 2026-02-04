@@ -1,6 +1,6 @@
-import AppGradient from "@/components/AppGradient";
-import CustomButton from "@/components/CustomButton";
-import { TimerContext } from "@/context/TimerContext";
+import AppGradient from "../../components/AppGradient";
+import CustomButton from "../../components/CustomButton";
+import { TimerContext } from "../../context/TimerContext";
 import { AntDesign } from "@expo/vector-icons";
 import { router } from "expo-router";
 import React, { useContext } from "react";
@@ -24,7 +24,7 @@ const AdjustMeditationDuration = () => {
                     onPress={() => router.back()}
                     className="absolute top-8 left-6 z-10"
                 >
-                    <AntDesign name="left-circle" size={50} color="white" />
+                    <AntDesign name="leftcircle" size={50} color="white" />
                 </Pressable>
                 <View className="justify-center h-4/5">
                     <View>

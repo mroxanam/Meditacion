@@ -1,5 +1,5 @@
 import { AntDesign } from "@expo/vector-icons";
-import { GalleryPreviewData } from "@/constants/models/AffirmationCategory";
+import { GalleryPreviewData } from "../../../constants/models/AffirmationCategory";
 import { router, useLocalSearchParams } from "expo-router";
 import {
     View,
@@ -8,8 +8,8 @@ import {
     Pressable,
     ScrollView,
 } from "react-native";
-import AFFIRMATION_GALLERY from "@/constants/affirmation-gallary";
-import AppGradient from "@/components/AppGradient";
+import AFFIRMATION_GALLERY from "../../../constants/affirmation-gallery";
+import AppGradient from "../../../components/AppGradient";
 import React, { useEffect, useState } from "react";
 
 const AffirmationPractice = () => {
@@ -54,7 +54,7 @@ const AffirmationPractice = () => {
                         onPress={() => router.back()}
                         className="absolute top-16 left-6 z-10"
                     >
-                        <AntDesign name="left-circle" size={50} color="white" />
+                        <AntDesign name="leftcircle" size={50} color="white" />
                     </Pressable>
 
                     <ScrollView

@@ -1,15 +1,15 @@
-import AppGradient from "@/components/AppGradient";
+import AppGradient from "../../components/AppGradient";
 import { router, useLocalSearchParams } from "expo-router";
 import React, { useContext, useEffect, useState } from "react";
 import { ImageBackground, Pressable, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 // @ts-ignore
 import { Audio } from "expo-av";
-import CustomButton from "@/components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 
-import MEDITATION_IMAGES from "@/constants/meditation-images";
-import { TimerContext } from "@/context/TimerContext";
-import { MEDITATION_DATA, AUDIO_FILES } from "@/constants/MeditationData";
+import MEDITATION_IMAGES from "../../constants/meditation-images";
+import { TimerContext } from "../../context/TimerContext";
+import { MEDITATION_DATA, AUDIO_FILES } from "../../constants/MeditationData";
 
 const Page = () => {
     const { id } = useLocalSearchParams();
