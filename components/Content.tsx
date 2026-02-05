@@ -9,8 +9,8 @@ const Content = ({ children }: any) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 20, // Approximate conversion of TailwindCSS px-5
-        paddingVertical: 12, // Approximate conversion of TailwindCSS py-3
+        paddingHorizontal: 20, 
+        paddingVertical: 12, 
     },
 });
 

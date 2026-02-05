@@ -13,7 +13,7 @@ module.exports = function (api) {
           }
         }
       ],
-      "react-native-reanimated/plugin", // 👈 SIEMPRE ÚLTIMO
+      "react-native-reanimated/plugin", 
     ],
   };
 };
