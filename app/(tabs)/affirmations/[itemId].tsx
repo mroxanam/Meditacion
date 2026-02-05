@@ -54,7 +54,7 @@ const AffirmationPractice = () => {
                         onPress={() => router.back()}
                         className="absolute top-16 left-6 z-10"
                     >
-                        <AntDesign name="leftcircle" size={50} color="white" />
+                        <AntDesign name="left-circle" size={50} color="white" />
                     </Pressable>
 
                     <ScrollView

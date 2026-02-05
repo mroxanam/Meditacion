@@ -2,11 +2,10 @@ import { Entypo, MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { Tabs, useRouter } from "expo-router";
 import Colors from "../../constants/Colors";
 import React from "react";
-import { Platform } from "react-native"; 
+import { Platform } from "react-native";
 
-export const unstable_settings = {
-    initialRouteName: "nature-meditate",
-};
+
+
 
 const Page = () => {
     const router = useRouter();
@@ -31,7 +30,7 @@ const Page = () => {
         >
             {/* 1. INICIO (CASITA) - Cambiamos el name para evitar conflictos */}
             <Tabs.Screen
-                name="home-tab" 
+                name="home"
                 options={{
                     tabBarLabel: "Inicio",
                     tabBarIcon: ({ color }) => (
@@ -42,7 +41,7 @@ const Page = () => {
                 listeners={{
                     tabPress: (e) => {
                         e.preventDefault();
-                        router.replace("/"); 
+                        router.replace("/");
                     },
                 }}
             />
