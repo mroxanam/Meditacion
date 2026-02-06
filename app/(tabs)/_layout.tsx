@@ -20,8 +20,8 @@ const Page = () => {
                     backgroundColor: "#161b2e",
                     borderTopColor: "#333",
                     // --- AJUSTES PARA QUE NO QUEDE ABAJO ---
-                    height: Platform.OS === 'android' ? 70 : 90, // Más alto en iPhone, justo en Android
-                    paddingBottom: Platform.OS === 'android' ? 12 : 30, // Despega los iconos del borde
+                    height: Platform.OS === 'android' ? 80 : 90, // Más alto en iPhone, justo en Android
+                    paddingBottom: Platform.OS === 'android' ? 20 : 30, // Despega los iconos del borde
                     position: 'absolute', // Esto a veces ayuda a que el sistema no lo empuje
                     borderTopWidth: 0,
                     elevation: 0, // Quita sombras raras en Android

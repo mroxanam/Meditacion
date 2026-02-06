@@ -23,7 +23,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#161B22"
-      }
+      },
+      "package": "com.devroxy.meditacionapp"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -34,9 +35,17 @@
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/RobotoMono-Regular.ttf"]
+          "fonts": [
+            "./assets/fonts/RobotoMono-Regular.ttf"
+          ]
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "59a19a03-9814-40f0-b05c-b27b5cc544c2"
+      }
+    }
   }
 }

@@ -1,46 +1,26 @@
-# 🧘 Simple Meditation App
+# 🧘 Meditacion App
 
-Una aplicación de meditación y afirmaciones creada con **React Native** y **Expo**. La app permite realizar sesiones de meditación con sonidos de la naturaleza y leer afirmaciones diarias categorizadas.
+Una aplicación nativa de meditación y afirmaciones creada con **React Native** y **Expo**. Diseñada para ofrecer una experiencia de relajación mediante sonidos de la naturaleza y afirmaciones diarias.
 
 ## 🚀 Tecnologías utilizadas
 
-* **Framework:** [Expo](https://expo.dev/) (SDK 54)
-* **Navegación:** [Expo Router](https://docs.expo.dev/router/introduction/) (Basado en archivos)
-* **Estilos:** [NativeWind](https://www.nativewind.dev/) (Tailwind CSS para React Native)
-* **Lenguaje:** TypeScript
+* **Framework:** [Expo](https://expo.dev/) (SDK 51 - Estable)
+* **Navegación:** [Expo Router](https://docs.expo.dev/router/introduction/)
+* **Estilos:** [NativeWind](https://www.nativewind.dev/) (Tailwind CSS)
+* **Motor de Build:** [EAS Build](https://expo.dev/build) (Para generar el APK de Android)
 * **Iconos:** @expo/vector-icons
 
-## 🛠️ Cómo se creó este proyecto
+## 🛠️ Estructura del Proyecto
 
-1.  **Inicialización:** Se utilizó `npx create-expo-app` con el template de navegación.
-2.  **Estructura de Navegación:** Se implementó una jerarquía de `(tabs)` para la pantalla principal y un `Stack` para las pantallas de detalle de afirmaciones y meditación.
-3.  **Context API:** Se creó un `TimerContext` para gestionar el tiempo de meditación de forma global.
-4.  **Diseño:** Se utilizaron Gradientes lineales (`expo-linear-gradient`) y fuentes personalizadas (`RobotoMono`) para una experiencia visual relajante.
-5.  **Datos:** Las afirmaciones se organizaron en una galería dinámica cargada desde constantes locales.
+1. **Navegación:** Jerarquía de `(tabs)` para acceso rápido y `Stack` para sesiones de meditación.
+2. **Gestión de Estado:** `TimerContext` para controlar el tiempo de meditación en toda la app.
+3. **Interfaz:** Uso de `expo-linear-gradient` para fondos relajantes y fuentes `RobotoMono`.
+4. **Multimedia:** Integración de sonidos locales para sesiones de respiración.
 
-## 💻 Instalación y Ejecución
+## 📱 Cómo generar el APK para Android
 
-Sigue estos pasos para correr el proyecto localmente:
+Para crear el archivo instalable y enviarlo por WhatsApp, se utiliza **EAS Build**:
 
-1.  **Clonar el repositorio e instalar dependencias:**
-    ```bash
-    npm install
-    ```
-
-2.  **Sincronizar dependencias de Expo:**
-    ```bash
-    npx expo install --check
-    ```
-
-3.  **Ejecutar en modo desarrollo:**
-    * Para **Android** (requiere SDK configurado): `npx expo start --android`
-    * Para **iOS** (requiere macOS): `npx expo start --ios`
-    * Para **Web**: `npx expo start --web`
-    * Para **Celular físico**: Escanea el código QR con la app **Expo Go**.
-
-## 🌐 Despliegue en Vercel (Web)
-
-Para visualizar la versión web en la nube:
-1. Conecta tu repositorio de GitHub a [Vercel](https://vercel.com/).
-2. Vercel detectará automáticamente que es un proyecto de Expo.
-3. Asegúrate de que el comando de build sea: `npx expo export:web`.
+1. **Configurar el build:**
+   bash
+   eas build:configure

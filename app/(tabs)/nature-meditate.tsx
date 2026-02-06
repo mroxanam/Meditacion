@@ -10,6 +10,8 @@ import {
     Text,
     View,
 } from "react-native";
+// IMPORTANTE: Agregamos SafeAreaView
+import { SafeAreaView } from "react-native-safe-area-context";
 
 import MEDITATION_IMAGES from "../../constants/meditation-images";
 import { MEDITATION_DATA } from "../../constants/MeditationData";
@@ -19,41 +21,45 @@ const Page = () => {
     return (
         <View style={{ flex: 1 }}>
             <AppGradient colors={["#161b2e", "#0a4d4a", "#766e67"]}>
-                <View className="mb-6">
-                    <Text className="text-gray-200 mb-3 font-bold text-4xl text-left">
-                        BIENVENIDOS
-                    </Text>
-                    <Text className="text-indigo-100 text-xl font-medium">
-                        TU ESPACIO DE MEDITACION PARA TODOS LOS DIAS
-                    </Text>
-                </View>
-                <FlatList
-                    data={MEDITATION_DATA}
-                    contentContainerStyle={styles.list}
-                    keyExtractor={(item) => item.id.toString()}
-                    showsVerticalScrollIndicator={false}
-                    renderItem={({ item }) => (
-                        <Pressable
-                            onPress={() => router.push(`/meditate/${item.id}`)}
-                            className="h-48 my-3 rounded-md overflow-hidden"
-                        >
-                            <ImageBackground
-                                source={MEDITATION_IMAGES[item.id - 1]}
-                                resizeMode="cover"
-                                style={styles.backgroundImage}
+                {/* 1. SafeAreaView envuelve el contenido para proteger el notch/cámara */}
+                <SafeAreaView style={{ flex: 1 }}>
+                    <View style={styles.containerHeader}>
+                        <Text className="text-gray-200 mb-3 font-bold text-4xl text-left">
+                            BIENVENIDOS
+                        </Text>
+                        <Text className="text-indigo-100 text-xl font-medium">
+                            TU ESPACIO DE MEDITACION PARA TODOS LOS DIAS
+                        </Text>
+                    </View>
+
+                    <FlatList
+                        data={MEDITATION_DATA}
+                        contentContainerStyle={styles.list}
+                        keyExtractor={(item) => item.id.toString()}
+                        showsVerticalScrollIndicator={false}
+                        renderItem={({ item }) => (
+                            <Pressable
+                                onPress={() => router.push(`/meditate/${item.id}`)}
+                                className="h-48 my-3 rounded-md overflow-hidden"
                             >
-                                <LinearGradient
-                                    colors={["transparent", "rgba(0,0,0,0.8)"]}
-                                    style={styles.gradient}
+                                <ImageBackground
+                                    source={MEDITATION_IMAGES[item.id - 1]}
+                                    resizeMode="cover"
+                                    style={styles.backgroundImage}
                                 >
-                                    <Text className="text-gray-100 text-3xl font-bold text-center">
-                                        {item.title}
-                                    </Text>
-                                </LinearGradient>
-                            </ImageBackground>
-                        </Pressable>
-                    )}
-                />
+                                    <LinearGradient
+                                        colors={["transparent", "rgba(0,0,0,0.8)"]}
+                                        style={styles.gradient}
+                                    >
+                                        <Text className="text-gray-100 text-3xl font-bold text-center">
+                                            {item.title}
+                                        </Text>
+                                    </LinearGradient>
+                                </ImageBackground>
+                            </Pressable>
+                        )}
+                    />
+                </SafeAreaView>
             </AppGradient>
             <StatusBar style="light" />
         </View>
@@ -61,6 +67,11 @@ const Page = () => {
 };
 
 const styles = StyleSheet.create({
+    containerHeader: {
+        paddingHorizontal: 20,
+        marginBottom: 20,
+        marginTop: 10, // Un pequeño extra debajo del área segura
+    },
     backgroundImage: {
         flex: 1,
         justifyContent: "center",
@@ -72,7 +83,8 @@ const styles = StyleSheet.create({
         width: "100%",
     },
     list: {
-        paddingBottom: 150,
+        paddingBottom: 120, // Espacio suficiente para que el último item no quede detrás de los iconos
+        paddingHorizontal: 20,
     },
 });
 
