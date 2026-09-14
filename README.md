@@ -53,7 +53,7 @@ npx expo install
 Desde la carpeta del proyecto:
 
 ```bash
-cd Mediterracion
+cd Meditacion
 npm install
 npx expo start
 ```
